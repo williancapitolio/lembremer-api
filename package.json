@@ -1,0 +1,22 @@
+{
+    "name": "lembremer-api",
+    "version": "1.0.0",
+    "description": "A MERN Stack project for taking notes similar to a TO-DO-LIST. Creates cards with a full CRUD and is able to prioritize whichever card the user wants. This the API part.",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/index",
+        "dev": "nodemon src/index"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/williancapitolio/lembremer-api.git"
+    },
+    "keywords": [],
+    "author": "Willian Pereira da Silva",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/williancapitolio/lembremer-api/issues"
+    },
+    "homepage": "https://github.com/williancapitolio/lembremer-api#readme"
+}
