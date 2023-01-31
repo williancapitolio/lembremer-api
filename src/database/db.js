@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+mongoose.set("strictQuery", true);
 
 const dbConnection = () => {
     console.log("Trying connect to db...");
