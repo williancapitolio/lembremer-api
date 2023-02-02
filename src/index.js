@@ -13,7 +13,7 @@ const app = express();
 
 dbConnection();
 
-app.use(cors());
+app.use(cors);
 app.use(express.json());
 app.use("/notes", notesRoute);
 app.use("/priorities", prioritiesRoute);
