@@ -11,14 +11,9 @@ import prioritiesRoute from "./routes/prioritiesRoute.js";
 const port = process.env.PORT || 3333;
 const app = express();
 
-var corsOptions = {
-    origin: "http://localhost:5173",
-    optionsSuccessStatus: 200
-}
-
 dbConnection();
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use("/notes", notesRoute);
 app.use("/priorities", prioritiesRoute);
