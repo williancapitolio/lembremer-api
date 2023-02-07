@@ -7,7 +7,7 @@ export const filter = async (req, res) => {
     try {
         const priority = req.query;
         const priorityNotes = await filterService(priority);
-        res.status(200).json({ message: "Filtered!", priorityNotes });
+        res.status(200).json(priorityNotes);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -23,7 +23,7 @@ export const update = async (req, res) => {
             updateNote.priority = true;
         }
         await updateNote.save();
-        res.status(200).json({ message: "Updated!", updateNote });
+        res.status(200).json(updateNote);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }

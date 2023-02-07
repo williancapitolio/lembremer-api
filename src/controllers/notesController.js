@@ -38,7 +38,7 @@ export const erase = async (req, res) => {
         if (!noteDeleted) {
             return res.status(404).json({ message: "Note not found." });
         }
-        res.status(200).json({ message: "Deleted!" });
+        res.status(200).json(noteDeleted);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
