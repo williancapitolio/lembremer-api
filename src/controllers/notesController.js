@@ -11,12 +11,12 @@ export const create = async (req, res) => {
         if (!title || !text) {
             return res.status(400).json({ message: "Submit all fields!" });
         }
-        await createService({
+        const noteCreated = await createService({
             title,
             text,
             priority
         });
-        res.status(201).json({ message: "Created!" });
+        res.status(201).json(noteCreated);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
