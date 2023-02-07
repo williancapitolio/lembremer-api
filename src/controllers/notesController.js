@@ -25,7 +25,7 @@ export const create = async (req, res) => {
 export const read = async (req, res) => {
     try {
         const notesList = await readService();
-        res.status(200).json({ notesList });
+        res.status(200).json(notesList);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -53,7 +53,7 @@ export const change = async (req, res) => {
             noteUpdated.text = text;
             await noteUpdated.save();
         }
-        res.status(200).json({ message: "OK", noteUpdated });
+        res.status(200).json(noteUpdated);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
